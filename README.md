@@ -78,7 +78,6 @@ This process is done for VizieR and HEASARC. In both cases any tables with zero 
 
 For VizieR, a correction for J1950 coordinates is applied. Also, any tables that represent distances as cz also have the redshift and error values corrected.
 
----
 ## Classes
 
 For tables that have this information, a procedure was applied to group classes into `STAR`, `GALAXY`, `QSO`, `AGN`, or `UNCLEAR`. When avaliable, a few sub-classes are included:
@@ -106,3 +105,22 @@ WHERE
 For SDSS, the `source` column indicates if that observation was made with the SDSS or BOSS instruments.
 
 We also downloaded the [PRIMUS](https://primus.ucsd.edu/index.html) catalogue, and it is also concatenated with the others.
+
+## Duplicate removal procedure
+
+After concatenating all catalogues, the resulting catalogue will inevitably have duplicate objects. To try and remove those objects the [STILTS](http://www.star.bris.ac.uk/~mbt/stilts/sun256/index.html) software was used.
+
+Before removing duplicates, the table was sorted in order to keep the objects with most information at the top. The full scheme is the following:
+* Objects with `e_z`, f`_z`, and `class_spec`,
+* objects with `e_z` and `class_spec`,
+* objects with `e_z` and `f_z`,
+* objects with `f_z` and `class_spec`,
+* objects with `e_z`,
+* objects with `class_spec`,
+* objects with `f_z`, and
+* objects without `e_z`, `f_z` or `class_spec`.
+
+An internal match is done using the `Sky+X` match parameter with `RA`, `DEC` and `z` with a 1 arcsecond maximum separation in coordinates and 0.002 in redshift, keeping only the first ocurrence:
+```
+java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='1 0.002' action=keep1 in=InputTable.csv out=OutputTable.csv
+```
