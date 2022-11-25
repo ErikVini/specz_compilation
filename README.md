@@ -1,7 +1,7 @@
 # The Southern-Hemisphere Spectroscopic Redshift Compilation
 ---
 ## Description
-This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below 10 degrees).
+This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below 10 degrees) focused on galaxies.
 
 This compilation contains over 3000 catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [CasJobs](http://skyserver.sdss.org/CasJobs/), and others. The columns avaliable are:
 * `RA`: Right ascension (degrees),
