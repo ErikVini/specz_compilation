@@ -1,7 +1,7 @@
 # The Southern-Hemisphere Spectroscopic Redshift Compilation
 ---
 ## Description
-This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere.
+This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below 10 degrees).
 
 This compilation contains over 3000 catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [CasJobs](http://skyserver.sdss.org/CasJobs/), and others. The columns avaliable are:
 * `RA`: Right ascension (degrees),
@@ -110,8 +110,8 @@ We also downloaded the [PRIMUS](https://primus.ucsd.edu/index.html) catalogue, a
 
 After concatenating all catalogues, the resulting catalogue will inevitably have duplicate objects. To try and remove those objects the [STILTS](http://www.star.bris.ac.uk/~mbt/stilts/sun256/index.html) software was used.
 
-Before removing duplicates, the table was sorted in order to keep the objects with most information at the top. The full scheme is the following:
-* Objects with `e_z`, f`_z`, and `class_spec`,
+Before removing duplicates, the table was sorted in order to keep the objects with most information at the top. The catalogue is then composed of blocks:
+* Objects with `e_z`, `f_z`, and `class_spec`,
 * objects with `e_z` and `class_spec`,
 * objects with `e_z` and `f_z`,
 * objects with `f_z` and `class_spec`,
@@ -119,8 +119,13 @@ Before removing duplicates, the table was sorted in order to keep the objects wi
 * objects with `class_spec`,
 * objects with `f_z`, and
 * objects without `e_z`, `f_z` or `class_spec`.
+Whenever the spectroscopic redshift error was available, the objects that block were sorted according to the error value (from lowest to highest).
 
 An internal match is done using the `Sky+X` match parameter with `RA`, `DEC` and `z` with a 1 arcsecond maximum separation in coordinates and 0.002 in redshift, keeping only the first ocurrence:
 ```
 java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='1 0.002' action=keep1 in=InputTable.csv out=OutputTable.csv
 ```
+
+## The final catalogue
+
+Images
