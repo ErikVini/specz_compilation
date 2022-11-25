@@ -3,7 +3,7 @@
 ## Description
 This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere.
 
-This compilation contains over 3000 catalogues of spectroscopic redshifts from services such as VizieR, HEASARC, and CasJobs. The columns avaliable are:
+This compilation contains over 3000 catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [CasJobs](http://skyserver.sdss.org/CasJobs/), and others. The columns avaliable are:
 * `RA`: Right ascension (degrees),
 * `DEC`: Declination (degrees),
 * `z`: spectroscopic redshift,
@@ -15,7 +15,7 @@ This compilation contains over 3000 catalogues of spectroscopic redshifts from s
 Not all catalogues used contain information about the redshift error, quality flags, and classes. In these situations the value is left empty.
 
 ## How it was done
-A script written in Python is used to download all catalogues from the VizieR and HEASARC TAP services using the following queries:
+A script written in Python is used to download all catalogues from the VizieR and HEASARC table access protocol (TAP) services using the following queries:
 
 RA columns:
 ```
@@ -92,3 +92,17 @@ The UNCLEAR class is reserved for objects where the classification was not clear
 ## Flags
 
 For tables with this information, a manual verification was made in order to classify flags as `KEEP` or `REMOVE`. The `KEEP` flag indicates that the spectroscopic redshift is reliable according to the authors of the catalogue. The original flag is maintained whitin parenthesis after the `KEEP` or `REMOVE` words.
+
+## Merging catalogues
+
+After all VizieR and HEASARC catalogues were downloaded, they were concatenated with the SDSS DR17 catalogue obtained using the following query:
+```
+SELECT spec.specObjID, spec.ra, spec.dec, spec.z as z, spec.zErr as e_z, spec.zWarning as f_z, spec.class as spec_class, spec.instrument
+INTO MyDB.SpecZ_DR17
+FROM SpecObj as spec
+WHERE
+  spec.dec <= +10 AND spec.class != 'STAR'
+```
+For SDSS, the `source` column indicates if that observation was made with the SDSS or BOSS instruments.
+
+We also downloaded the [PRIMUS](https://primus.ucsd.edu/index.html) catalogue, and it is also concatenated with the others.
