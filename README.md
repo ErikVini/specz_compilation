@@ -128,4 +128,4 @@ java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='1 0.002' a
 
 ## The final catalogue
 
-Images
+![Alt text](Images/AllSky_Spec_Scatter.png?raw=true "Title")
