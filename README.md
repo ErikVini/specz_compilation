@@ -128,4 +128,9 @@ java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='1 0.002' a
 
 ## The final catalogue
 
-![Alt text](Images/AllSky_Spec_Scatter.png?raw=true "Title")
+![Distribution of objects in the sky. Image also available in "Images" folder.](Images/AllSky_Spec_Scatter.png?raw=true "Distribution of objects in the sky.")
+
+![Number of objects per class. Image also available in "Images" folder.](Images/Class_Distribution.png?raw=true "Number of objects per class.")
+
+![Distribution of redshifts per class. Image also available in "Images" folder.](Images/SpecZ_Distribution.png?raw=true "Distribution of redshifts per class.")
+
