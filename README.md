@@ -129,6 +129,10 @@ An internal match is done using the `Sky+X` match parameter with `RA`, `DEC` and
 java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='1 0.002' action=keep1 in=InputTable.csv out=OutputTable.csv
 ```
 
+## Other notes
+
+Some redshift values are duplicated, mainly in the [GLADEP](http://glade.elte.hu/) catalogue, but the reason behind this is not explained in the documentation. For this reason all objects for which the redshift value is repeated more than 60 times are removed from the sample.
+
 ## The final catalogue
 
 ![Distribution of objects in the sky. Image also available in "Images" folder.](Images/AllSky_Spec_Scatter.png?raw=true "Distribution of objects in the sky.")
