@@ -79,7 +79,7 @@ Example: some tables have flags in magnitudes, but they share the same unified c
 
 This process is done for VizieR and HEASARC. In both cases any tables with zero objects are removed.
 
-For VizieR, a correction for J1950 coordinates is applied. Also, any tables that represent distances as cz also have the redshift and error values corrected.
+For VizieR, a correction for J1950 coordinates is applied. Also, any tables that represent distances as `cz` also have the redshift and error values corrected.
 
 ## Classes
 
