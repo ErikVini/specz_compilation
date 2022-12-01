@@ -83,13 +83,26 @@ For VizieR, a correction for J1950 coordinates is applied. Also, any tables that
 
 ## Classes
 
-For tables that have this information, a procedure was applied to group classes into `STAR`, `GALAXY`, `QSO`, `AGN`, or `UNCLEAR`. When avaliable, a few sub-classes are included:
-* `STAR(SN)` for supernovae,
-* `STAR(WD)` for white-dwarf stars,
-* `GALAXY(SF)` for star-forming galaxies,
-* `QSO(BLLAC)` for BL-Lac type objects.
+For tables that have this information, a procedure was applied to group classes into `STAR`, `GALAXY`, `QSO`, `AGN`, `UNCLEAR`, or `GLOBCLUSTER`. When avaliable, a few sub-classes are included:
 
-The UNCLEAR class is reserved for objects where the classification was not clear enough to be included in the other four groups.
+* `GALAXY`
+  * `GALAXY(SF)`: Star-forming galaxies
+  * `GALAXY(CLUSTER)`: Cluster of galaxies
+  * `GALAXY(BINARY)`: Binary galaxies
+  * `GALAXY(PAIR)`: Galaxy pair
+  * `GALAXY(TRIP)`: Galaxy triplet
+  * `GALAXY(GROUP)`: Galaxy group
+* `STAR`
+  * `STAR(SN)`: Supernovae
+  * `STAR(WD)`: White-dwarf star
+* `QSO`
+  * `QSO(BLLAC)`: BL-Lac object
+* `UNCLEAR`
+  * `UNCLEAR(POINT-SOURCE)`
+  * `UNCLEAR(EXTENDED)`
+  * `UNCLEAR(BROADLINE) `
+
+The `UNCLEAR` class is reserved for objects where the classification was not clear enough to be included in the other five groups.
 
 ## Flags
 
