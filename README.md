@@ -137,9 +137,9 @@ Before removing duplicates, the table was sorted in order to keep the objects wi
 * objects without `e_z`, `f_z` or `class_spec`.
 Whenever the spectroscopic redshift error was available, the objects that block were sorted according to the error value (from lowest to highest).
 
-An internal match is done using the `Sky+X` match parameter with `RA`, `DEC` and `z` with a 1 arcsecond maximum separation in coordinates and 0.002 in redshift, keeping only the first ocurrence (thus the importance of the sorting procedure above):
+An internal match is done using the `Sky+X` match parameter with `RA`, `DEC` and `z` with a 2 arcsecond maximum separation in coordinates and 0.002 in redshift, keeping only the first ocurrence (thus the importance of the sorting procedure above):
 ```
-java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='1 0.002' action=keep1 in=InputTable.csv out=OutputTable.csv
+java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='2 0.002' action=keep1 in=InputTable.csv out=OutputTable.csv
 ```
 
 ## The final catalogue
