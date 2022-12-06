@@ -1,4 +1,4 @@
-service,table_name,description
+TAP_service,table_name,description
 VizieR,B/avo.rad/catalog,"MERLIN+VLA HFF/HDF(N) catalogue ( Muxlow T.W.B, Richards A.M.S, Garrington S.T., Wilkinson P.N. Anderson B.A., Richards E.A., Axon D.J., Partridge R.B., Kellermann K.I., Fomalont E.B. Muxlow T.W.B, et al. MNRAS (in press))"
 VizieR,B/polarbase/polarbase,"Polarbase database (IRAP) ( Petit P., Paletou F., Mathias P., Glorian JM., Amato A.)"
 VizieR,I/313/lqrf,"J2000 equatorial coordinates catalog ( Andrei A.H., Souchay J., Zacharias N., Smart R.L., Vieira Martins R., da Silva Neto D.N., Camargo J.I.B., Assafin M., Barache C., Bouquillon S., Penna J.L., Taris, F.)"
@@ -3539,10 +3539,8 @@ HEASARC,fermilatra,Fermi LAT Sources Refined Associations Catalog
 HEASARC,baxgalclus,BAX X-Ray Galaxy Clusters and Groups Catalog
 HEASARC,sptszspsc,South Pole Telescope Sunyaev-Zeldovich Survey Point Source Catal
 HEASARC,cdfn2msnew,Chandra Deep Field North 2-Megasecond Improved Point Source Cata
-HEASARC,cdfn2msnew,Chandra Deep Field North 2-Megasecond Improved Point Source Cata
 HEASARC,ccosrssfag,Chandra COSMOS Radio-Selected Star-Forming Galaxies and AGN Cata
 HEASARC,xmmslewegs,XMM-Newton Slew Survey Extragalactic Sample
-HEASARC,nuecdfscat,NuSTAR Survey of Extended Chandra Deep Field South (ECDF-S) Sour
 HEASARC,nuecdfscat,NuSTAR Survey of Extended Chandra Deep Field South (ECDF-S) Sour
 HEASARC,rosgalclus,ROSAT PSPC Catalog of Clusters of Galaxies
 HEASARC,nustarssc2,NuSTAR Serendipitous Survey 40-Month Secondary Source Catalog
@@ -3562,11 +3560,8 @@ HEASARC,tevcat,TeV Gamma-Ray Source Catalog
 HEASARC,elaiss1oid,ELAIS S1 Field X-Ray Source Optical/IR Identifications Catalog
 HEASARC,rssgrbag,Radio-Selected Gamma-Ray Burst Afterglow Catalog
 HEASARC,isgri4yrct,INTEGRAL ISGRI 4-Year Source Catalog
-HEASARC,isgri4yrct,INTEGRAL ISGRI 4-Year Source Catalog
 HEASARC,rosnepoid,ROSAT North Ecliptic Pole Survey Optical Identifications
 HEASARC,fermilac,Fermi LAT Second AGN Catalog
-HEASARC,fermilac,Fermi LAT Second AGN Catalog
-HEASARC,gwsstrpcxo,Groth-Westphal Strip Chandra X-Ray Point Source Catalog
 HEASARC,gwsstrpcxo,Groth-Westphal Strip Chandra X-Ray Point Source Catalog
 HEASARC,rixos,ROSAT International X-Ray/Optical Survey Source Catalog
 HEASARC,swbat105m,Swift-BAT 105-Month All-Sky Hard X-Ray Survey
@@ -3575,15 +3570,11 @@ HEASARC,rosatrqq,ROSAT Radio-Quiet Quasars Catalog
 HEASARC,exohgls,EXOSAT/CMA High Galactic Latitude Survey
 HEASARC,rosnepagn,ROSAT North Ecliptic Pole Survey Active Galactic Nuclei Catalog
 HEASARC,vlaecdfsoi,VLA Extended-Chandra Deep Field-South 1.4-GHz Sources Opt/IR Cou
-HEASARC,vlaecdfsoi,VLA Extended-Chandra Deep Field-South 1.4-GHz Sources Opt/IR Cou
-HEASARC,vlaecdfsoi,VLA Extended-Chandra Deep Field-South 1.4-GHz Sources Opt/IR Cou
-HEASARC,vlaecdfsoi,VLA Extended-Chandra Deep Field-South 1.4-GHz Sources Opt/IR Cou
 HEASARC,rassnorsam,ROSAT All-Sky Survey Completely Identified Northern Sample
 HEASARC,saxhellasr,BeppoSAX High-Energy Large Area Survey (HELLAS) Radio Source Cat
 HEASARC,rassfirst,ROSAT All-Sky Survey Single FIRST Matches Catalog
 HEASARC,mggammacat,Gamma-Ray Source Summary Catalog (Macomb & Gehrels 1999 & 2001)
 HEASARC,osrilqxray,Optically Selected Radio-Intermediate and Loud Quasars X-ray Emi
-HEASARC,qso,Hewitt & Burbidge (1993) QSO Catalog
 HEASARC,qso,Hewitt & Burbidge (1993) QSO Catalog
 HEASARC,osqsonvss,Optically-Selected QSOS NVSS-Detected Source Catalog
 HEASARC,zcat,CfA Redshift Catalog (June 1995 Version)
@@ -3600,9 +3591,7 @@ HEASARC,markarian,First Byurakan Survey (Markarian) Catalog of UV-Excess Galaxie
 HEASARC,exgalemobj,Hewitt & Burbidge (1991) Catalog of Extragalactic Emission-Line
 HEASARC,fbsbsocat,First Byurakan Survey Blue Stellar Objects Catalog
 HEASARC,suzakuwam,Suzaku Wide-Band All-Sky Monitor (WAM) Catalog of Event Lightcur
-HEASARC,suzakuwam,Suzaku Wide-Band All-Sky Monitor (WAM) Catalog of Event Lightcur
 HEASARC,milliquas,"Million Quasars Catalog (MILLIQUAS), Version 7.7 (15 October 202"
-HEASARC,rass6dfgs,ROSAT All-Sky Survey/6dF Galaxy Survey Catalog of X-Ray Selected
 HEASARC,rass6dfgs,ROSAT All-Sky Survey/6dF Galaxy Survey Catalog of X-Ray Selected
 HEASARC,xms,XMM-Newton Medium Sensitivity Survey (XMS) Source Catalog
 HEASARC,xshzagncxo,X-Ray Selected High-z AGN Catalog
@@ -3610,33 +3599,20 @@ HEASARC,uvqs,UV-Bright Quasar Survey (UVQS) DR1 Catalog
 HEASARC,xmmcdfs210,XMM-Newton Deep Survey in the CDF-S 2-10 keV Source Catalog
 HEASARC,nucosmosfc,NuSTAR COSMOS Field X-Ray Source Catalog
 HEASARC,sdssquasar,Sloan Digital Sky Survey Quasar Catalog (Twelfth Data Release: D
-HEASARC,sdssquasar,Sloan Digital Sky Survey Quasar Catalog (Twelfth Data Release: D
-HEASARC,sdssquasar,Sloan Digital Sky Survey Quasar Catalog (Twelfth Data Release: D
-HEASARC,sdssquasar,Sloan Digital Sky Survey Quasar Catalog (Twelfth Data Release: D
-HEASARC,sdssquasar,Sloan Digital Sky Survey Quasar Catalog (Twelfth Data Release: D
-HEASARC,sdssquasar,Sloan Digital Sky Survey Quasar Catalog (Twelfth Data Release: D
-HEASARC,sdssquasar,Sloan Digital Sky Survey Quasar Catalog (Twelfth Data Release: D
-HEASARC,sdssquasar,Sloan Digital Sky Survey Quasar Catalog (Twelfth Data Release: D
-HEASARC,sdssquasar,Sloan Digital Sky Survey Quasar Catalog (Twelfth Data Release: D
-HEASARC,sdssquasar,Sloan Digital Sky Survey Quasar Catalog (Twelfth Data Release: D
 HEASARC,champhxagn,CHAMP (Chandra Multiwavelength Project) Hard X-Ray Emitting AGN
-HEASARC,spidersxmm,SDSS-IV/SPIDERS XMM-Based X-Ray Point Source Spectroscopic Catal
 HEASARC,spidersxmm,SDSS-IV/SPIDERS XMM-Based X-Ray Point Source Spectroscopic Catal
 HEASARC,xmmvaragn,Ensemble X-Ray Variability of AGN in 2XMMi-DR3
 HEASARC,noras,Northern ROSAT All-Sky (NORAS) Galaxy Cluster Survey Catalog
 HEASARC,ecdfsoid2,Extended Chandra Deep Field-South Optical and Near-IR Counterpar
-HEASARC,ecdfsoid2,Extended Chandra Deep Field-South Optical and Near-IR Counterpar
 HEASARC,wblgalaxy,WBL Individual Galaxies Data Catalog (White et al. 1999)
 HEASARC,atlasesid,AT Large Area Survey (ATLAS) ELAIS-S1/SWIRE ID and Classificatio
 HEASARC,pdsoid2,Phoenix Deep Survey Optical and Near-Infrared Counterparts Catal
-HEASARC,sdssnbckde,SDSS NBCKDE Catalog of Photometrically Selected Quasar Candidate
 HEASARC,sdssnbckde,SDSS NBCKDE Catalog of Photometrically Selected Quasar Candidate
 HEASARC,candelscxo,CANDELS H-Band Selected Chandra Source Catalog
 HEASARC,eingalclus,Einstein Observatory Clusters of Galaxies Catalog
 HEASARC,xmmbssagn,XMM-Newton Bright Serendipitous Survey: AGN X-Ray Spectral Prope
 HEASARC,xmmcdfs510,XMM-Newton Deep Survey in the CDF-S 5-10 keV Source Catalog
 HEASARC,sdssbalqso,Sloan Digital Sky Survey Broad Absorption Line Quasars Catalog:
-HEASARC,sbsggencat,Second Byurakan Survey General Catalog Galaxies Optical Database
 HEASARC,sbsggencat,Second Byurakan Survey General Catalog Galaxies Optical Database
 HEASARC,hcg,Hickson Compact Groups of Galaxies (HCG) Catalog
 HEASARC,roxa,ROXA (Radio-Optical-X-ray at ASDC) Blazars Catalog
@@ -3668,7 +3644,6 @@ HEASARC,w2ragncat,WISE/2MASS/RASS (W2R) AGN Sample Catalog
 HEASARC,xteasscat,XTE All-Sky Slew Survey Catalog
 HEASARC,xwas,XMM-Newton Wide Angle Survey
 HEASARC,xmmcosmagn,XMM-COSMOS Catalog of X-Ray Selected Type 1 AGN
-HEASARC,xmmcosmagn,XMM-COSMOS Catalog of X-Ray Selected Type 1 AGN
 HEASARC,sdsscxoqso,Sloan Digital Sky Survey Quasars Detected by Chandra
 HEASARC,spicescxo,SPICES Lynx Field Chandra X-Ray Source Catalog
 HEASARC,rosnepxray,ROSAT North Ecliptic Pole Survey X-Ray Source Catalog
@@ -3678,8 +3653,6 @@ HEASARC,lockmanoir,Lockman Hole AGN Optical and Infrared Properties Catalog
 HEASARC,saisncat,Sternberg Astronomical Institute Catalog of Supernovae
 HEASARC,agnsdssxmm,Sloan Digital Sky Survey/XMM-Newton AGN Spectral Properties Cata
 HEASARC,xrayselbll,X-Ray Selected BL Lac Objects Catalog
-HEASARC,xrayselbll,X-Ray Selected BL Lac Objects Catalog
-HEASARC,spidersros,SDSS-IV/SPIDERS ROSAT-Based X-Ray Point Source Spectroscopic Cat
 HEASARC,spidersros,SDSS-IV/SPIDERS ROSAT-Based X-Ray Point Source Spectroscopic Cat
 HEASARC,markarian2,Markarian Galaxies Optical Database
 HEASARC,xdeep2,DEEP2 Galaxy Redshift Survey Fields Chandra Point Source Catalog
@@ -3706,7 +3679,6 @@ HEASARC,arxa,Atlas of Radio/X-Ray Associations (ARXA)
 HEASARC,asiagosn,Asiago Supernova Catalog (Dynamic Version)
 HEASARC,nustarssc,NuSTAR Serendipitous Survey 40-Month Primary Source Catalog
 HEASARC,elaisfbmc,European Large-Area ISO Survey (ELAIS) Final Band-Merged Catalog
-HEASARC,elaisfbmc,European Large-Area ISO Survey (ELAIS) Final Band-Merged Catalog
 HEASARC,exopubs,EXOSAT Bibliography
 HEASARC,at20g1fgl,AT20G/Fermi 1FGL Source Catalog
 HEASARC,vla3701p4,VLA A370 Cluster of Galaxies 1.4-GHz Source Catalog
@@ -3716,13 +3688,8 @@ HEASARC,cdfn2msoi2,Chandra Deep Field North Updated Optical & IR Catalog
 HEASARC,maranoxmm,Marano Field XMM-Newton X-Ray Source Optical Counterparts
 HEASARC,sdsslasqso,Sloan Digital Sky Survey/UKIRT DSS Large Area Survey Matched Qua
 HEASARC,chandfs4ms,Chandra Deep Field South 4-Megasecond Catalog
-HEASARC,chandfs4ms,Chandra Deep Field South 4-Megasecond Catalog
-HEASARC,chandfs4ms,Chandra Deep Field South 4-Megasecond Catalog
-HEASARC,chandfs4ms,Chandra Deep Field South 4-Megasecond Catalog
-HEASARC,twodfqsoz,2dF QSO Redshift (2QZ) Survey
 HEASARC,twodfqsoz,2dF QSO Redshift (2QZ) Survey
 HEASARC,atlascsid,AT Large Area Survey (ATLAS) CDF-S/SWIRE ID and Classification C
-HEASARC,wisehspcat,2WHSP Catalog of High Synchrotron Peaked Blazars and Candidates
 HEASARC,wisehspcat,2WHSP Catalog of High Synchrotron Peaked Blazars and Candidates
 HEASARC,ascaegclus,ASCA Elliptical Galaxies and Galaxy Clusters Catalog
 HEASARC,chansexagn,Chandra Serendipitous Extragalactic X-Ray Source ID (SEXSI)/Spit
@@ -3732,16 +3699,8 @@ HEASARC,emss,Einstein Catalog IPC EMSS Survey
 HEASARC,fermilgrb,Fermi LAT Second Gamma-Ray Burst Catalog
 HEASARC,glxsdssqso,GALEX/SDSS Quasar Catalog
 HEASARC,swxcsoxid,Swift X-Ray Telescope Cluster Survey Cross-Correlation Catalog
-HEASARC,swxcsoxid,Swift X-Ray Telescope Cluster Survey Cross-Correlation Catalog
-HEASARC,swxcsoxid,Swift X-Ray Telescope Cluster Survey Cross-Correlation Catalog
-HEASARC,swxcsoxid,Swift X-Ray Telescope Cluster Survey Cross-Correlation Catalog
-HEASARC,swxcsoxid,Swift X-Ray Telescope Cluster Survey Cross-Correlation Catalog
-HEASARC,swxcsoxid,Swift X-Ray Telescope Cluster Survey Cross-Correlation Catalog
-HEASARC,swxcsoxid,Swift X-Ray Telescope Cluster Survey Cross-Correlation Catalog
-HEASARC,swxcsoxid,Swift X-Ray Telescope Cluster Survey Cross-Correlation Catalog
 HEASARC,sdssxmmqso,Sloan Digital Sky Survey (DR5)/XMM-Newton Quasar Survey Catalog
 HEASARC,rbs,ROSAT Bright Survey (Schwope et al. 2000)
-HEASARC,ecdfsnew,Extended Chandra Deep Field South 250-ks Improved Point Source C
 HEASARC,ecdfsnew,Extended Chandra Deep Field South 250-ks Improved Point Source C
 HEASARC,xmmlssoid,XMM-Newton Large-Scale Structure Optical Identifications Catalog
 HEASARC,cosmosvlba,COSMOS Field VLBA Observations 1.4-GHz Source Catalog
@@ -3754,9 +3713,6 @@ HEASARC,warps,"Wide Angle ROSAT Pointed Survey, First Phase (WARPS-I)"
 HEASARC,rasssdssgc,ROSAT All-Sky Survey and Sloan Digital Sky Survey DR7 Galaxy Clu
 HEASARC,romabzcat,Roma-BZCAT Multi-Frequency Catalog of Blazars
 HEASARC,atlas2p3gh,AT Large Area Survey (ATLAS) ELAIS-S1 & CDF-S 2.3-GHz Source Cat
-HEASARC,chandfs7ms,Chandra Deep Field-South 7-Megasecond X-Ray Source Catalog
-HEASARC,chandfs7ms,Chandra Deep Field-South 7-Megasecond X-Ray Source Catalog
-HEASARC,chandfs7ms,Chandra Deep Field-South 7-Megasecond X-Ray Source Catalog
 HEASARC,chandfs7ms,Chandra Deep Field-South 7-Megasecond X-Ray Source Catalog
 HEASARC,pdsoid,Phoenix Deep Survey Optical and Near-Infrared Counterparts Catal
 HEASARC,morx,Million Optical/Radio/X-Ray Associations Catalog
