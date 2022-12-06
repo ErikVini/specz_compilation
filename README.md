@@ -148,5 +148,6 @@ java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='2 0.002' a
 
 ![Number of objects per class. Image also available in "Images" folder.](Images/Class_Distribution.png?raw=true "Number of objects per class.")
 
-![Distribution of redshifts per class. Image also available in "Images" folder.](Images/SpecZ_Distribution.png?raw=true "Distribution of redshifts per class.")
+![Number of objects per flag. Image also available in "Images" folder.](Images/Flags_Distribution.png?raw=true "Number of objects per flag.")
 
+![Distribution of redshifts per class. Image also available in "Images" folder.](Images/SpecZ_Distribution.png?raw=true "Distribution of redshifts per class.")
