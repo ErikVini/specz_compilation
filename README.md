@@ -142,6 +142,10 @@ An internal match is done using the `Sky+X` match parameter with `RA`, `DEC` and
 java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='2 0.002' action=keep1 in=InputTable.csv out=OutputTable.csv
 ```
 
+## Known issues
+
+Some redshifts are duplicated even after the previous duplicate removal procedure. This is more common for extended objects (such as big galaxies in nearby clusters). This happens because, although the measurements lie inside a 2 arcsecond radius, they differ by more than 0.002 in z, thus they are not detected as duplicated and are not removed.
+
 ## The final catalogue
 
 ![Distribution of objects in the sky. Image also available in "Images" folder.](Images/AllSky_Spec_Scatter.png?raw=true "Distribution of objects in the sky.")
