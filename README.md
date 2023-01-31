@@ -83,7 +83,7 @@ For VizieR, a correction for J1950 coordinates is applied. Also, any tables that
 
 ## Classes
 
-For tables that have this information, a procedure was applied to group classes into `STAR`, `GALAXY`, `QSO`, `AGN`, `UNCLEAR`, or `GLOBCLUSTER`. When avaliable, a few sub-classes are included:
+For tables that have this information, a manual procedure was applied to group classes into `STAR`, `GALAXY`, `QSO`, `AGN`, `UNCLEAR`, or `GLOBCLUSTER`. When avaliable, a few sub-classes are included:
 
 * `GALAXY`
   * `GALAXY(SF)`: Star-forming galaxies
