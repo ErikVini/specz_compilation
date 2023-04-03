@@ -13,7 +13,7 @@ The columns avaliable are:
 * `e_z`: error in the spectroscopic redshift,
 * `f_z`: flag for the spectroscopic redshift quality,
 * `class_spec`: spectroscopic classification of the object,
-* `class_spec`: original spectroscopic classification of the object (before grouping),
+* `original_class_spec`: original spectroscopic classification of the object (before grouping),
 * `source`: TAP service and catalogue from which the information was obtained.
 
 Not all catalogues used contain information about the redshift error, quality flags, and classes. In these situations the value is left empty.
