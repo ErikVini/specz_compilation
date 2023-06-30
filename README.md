@@ -3,10 +3,18 @@
 ## Description
 This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below 10 degrees) focused on galaxies.
 
-This compilation contains 3842 catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [CasJobs](http://skyserver.sdss.org/CasJobs/), and others. After removing duplicates, the number of catalogues in the final compination is 2181. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`VizieR_HEASARC_Catalogues_All.csv`](https://github.com/ErikVini/SpecZCompilation/blob/5a47de5612b13d2589eb4168fb221f39cc3b34b7/VizieR_HEASARC_Catalogues_All.csv) and [`VizieR_HEASARC_Catalogues_Used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/5a47de5612b13d2589eb4168fb221f39cc3b34b7/VizieR_HEASARC_Catalogues_Used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
+This compilation contains 3842 catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [CasJobs](http://skyserver.sdss.org/CasJobs/), and others. After removing duplicates, the number of catalogues in the final compination is 2192 and the total number of objects is 6659608, including galaxies, stars, QSOs, and other object types. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`VizieR_HEASARC_Catalogues_All.csv`](https://github.com/ErikVini/SpecZCompilation/blob/5a47de5612b13d2589eb4168fb221f39cc3b34b7/VizieR_HEASARC_Catalogues_All.csv) and [`VizieR_HEASARC_Catalogues_Used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/5a47de5612b13d2589eb4168fb221f39cc3b34b7/VizieR_HEASARC_Catalogues_Used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
 
+Compilation numbers:
+* `GALAXY`: 3043608
+* `STAR`: 58564
+* `SUPERNOVAE`: 2877
+* `QSO`: 74436
+* `AGN`: 14382
+* `GLOBCLUSTER`: 296
+* `UNCLEAR` (decribed below): 3465715
 
-The columns avaliable are:
+The columns available are:
 * `RA`: right ascension (degrees),
 * `DEC`: declination (degrees),
 * `z`: spectroscopic redshift,
@@ -101,10 +109,10 @@ For tables that have this information, a manual procedure was applied to group c
   * `GALAXY(LSB)`: Low surface brightness galaxy
   * `GALAXY(JELLYFISH)`: Jellyfish galaxy
 * `STAR`
-  * `STAR(SN)`: Supernovae
   * `STAR(NEB)`: Nebulae
   * `STAR(WD)`: White-dwarf star
   * `STAR(HII)`: HII region
+* `SUPERNOVAE`
 * `QSO`
   * `QSO(BLLAC)`: BL-Lac object
   * `QSO(BLAZAR)`: Blazar
@@ -126,7 +134,7 @@ For tables that have this information, a manual procedure was applied to group c
   * `UNCLEAR(EmLS)`
   * `UNCLEAR(Sy2)`
 
-The `UNCLEAR` class is reserved for objects where the classification was not clear enough to be included in the other five groups.
+The `UNCLEAR` class is reserved for objects where the classification was not clear enough to be included in the other six groups.
 
 ## Flags
 
@@ -134,7 +142,7 @@ For tables with this information, a manual verification was made in order to cla
 
 ## Merging catalogues
 
-After all VizieR and HEASARC catalogues were downloaded and processed, they were concatenated with the [SDSS DR17](http://skyserver.sdss.org/CasJobs/), [PRIMUS](https://primus.ucsd.edu/version1.html), [NED](https://ned.ipac.caltech.edu/), and [HYPERLEDA](https://leda.univ-lyon1.fr/) catalogues.
+After all VizieR and HEASARC catalogues were downloaded and processed, they were concatenated with the [SDSS DR17](http://skyserver.sdss.org/CasJobs/), [PRIMUS](https://primus.ucsd.edu/version1.html), [NED](https://ned.ipac.caltech.edu/), [HYPERLEDA](https://leda.univ-lyon1.fr/), and [2dFLenS](https://2dflens.swin.edu.au/) catalogues.
 
 ## Duplicate removal procedure
 
@@ -159,6 +167,8 @@ java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='2 0.002' a
 ## Known issues
 
 Some redshifts are duplicated even after the previous duplicate removal procedure. This is more common for extended objects (such as big galaxies in nearby clusters). This happens because, although the measurements lie inside a 2 arcsecond radius, they differ by more than 0.002 in z, thus they are not detected as duplicated and are not removed.
+
+The HEASARC table descriptions are incomplete. There seems to be a limit to how many characters are returned, so the text is cut.
 
 ## The final catalogue
 
