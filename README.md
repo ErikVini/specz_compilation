@@ -12,7 +12,7 @@ Compilation numbers:
 * `QSO`: 74436
 * `AGN`: 14382
 * `GLOBCLUSTER`: 296
-* `UNCLEAR` (decribed below): 3465715
+* `UNCLEAR` (described below): 3465715
 
 The columns available are:
 * `RA`: right ascension (degrees),
