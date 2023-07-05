@@ -7,12 +7,12 @@ This compilation contains 3842 catalogues of spectroscopic redshifts from servic
 
 Compilation numbers:
 * `GALAXY`: 3093951
-* `STAR`: 1134584
+* `STAR`: 1615000
 * `SUPERNOVAE`: 2103
 * `QSO`: 81568
 * `AGN`: 10112
 * `GLOBCLUSTER`: 296
-* `UNCLEAR` (described below): 2194044
+* `UNCLEAR` (described below): 1713628
 
 The columns available are:
 * `RA`: right ascension (degrees),
