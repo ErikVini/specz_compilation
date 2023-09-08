@@ -3,16 +3,16 @@
 ## Description
 This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below 10 degrees) focused on galaxies.
 
-This compilation contains 3842 catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [SDSS](http://skyserver.sdss.org/CasJobs/), and others. After removing duplicates, the number of catalogues in the final compination is 2192 and the total number of objects is 6516217, including galaxies, stars, QSOs, and other object types. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`VizieR_HEASARC_Catalogues_All.csv`](https://github.com/ErikVini/SpecZCompilation/blob/5a47de5612b13d2589eb4168fb221f39cc3b34b7/VizieR_HEASARC_Catalogues_All.csv) and [`VizieR_HEASARC_Catalogues_Used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/5a47de5612b13d2589eb4168fb221f39cc3b34b7/VizieR_HEASARC_Catalogues_Used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
+This compilation contains 3800+ catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [SDSS](http://skyserver.sdss.org/CasJobs/), and others. After removing duplicates, the number of catalogues in the final compination is 1900 and the total number of objects is 6513343, including galaxies, stars, QSOs, and other object types. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`Catalogues_All.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/Catalogues_All.csv) and [`Catalogues_Used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/Catalogues_Used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
 
 Compilation numbers:
-* `GALAXY`: 3093951
-* `STAR`: 1615000
-* `SUPERNOVAE`: 2103
-* `QSO`: 81568
-* `AGN`: 10112
-* `GLOBCLUSTER`: 296
-* `UNCLEAR` (described below): 1713628
+* `GALAXY`: 3010328
+* `STAR`: 1627502
+* `SUPERNOVAE`: 3043
+* `QSO`: 97299
+* `AGN`: 10115
+* `GLOBCLUSTER`: 470
+* `UNCLEAR` (described below): 1765027
 
 The columns available are:
 * `RA`: right ascension (degrees),
