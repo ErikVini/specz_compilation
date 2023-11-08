@@ -3,16 +3,16 @@
 ## Description
 This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below 10 degrees) focused on galaxies.
 
-This compilation contains 3800+ catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [SDSS](http://skyserver.sdss.org/CasJobs/), and others. After removing duplicates, the number of catalogues in the final compination is 1900 and the total number of objects is 6513343, including galaxies, stars, QSOs, and other object types. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`Catalogues_All.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/Catalogues_All.csv) and [`Catalogues_Used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/Catalogues_Used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
+This compilation contains 3800+ catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [SDSS](http://skyserver.sdss.org/CasJobs/), and others. After removing duplicates, the number of catalogues in the final compination is 1727 and the total number of objects is 5624559, including galaxies, stars, QSOs, and other object types. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`Catalogues_All.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/Catalogues_All.csv) and [`Catalogues_Used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/Catalogues_Used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
 
 Compilation numbers:
-* `GALAXY`: 3010328
-* `STAR`: 1627502
-* `SUPERNOVAE`: 3043
-* `QSO`: 97299
-* `AGN`: 10115
-* `GLOBCLUSTER`: 470
-* `UNCLEAR` (described below): 1765027
+* `GALAXY`: 2673964
+* `STAR`: 1538133
+* `SUPERNOVAE`: 1423
+* `QSO`: 109505
+* `AGN`: 6407
+* `GLOBCLUSTER`: 438
+* `UNCLEAR` (described below): 1294689
 
 The columns available are:
 * `RA`: right ascension (degrees),
@@ -121,7 +121,7 @@ For tables that have this information, a manual procedure was applied to group c
   * `AGN(Sy1)`: Seyfert 1 AGN
   * `AGN(Sy)`: AGN with unspecified Seyfert type
 * `GLOBCLUSTER`
-* `UNCLEAR`: This class represents classification that were unclear or may not be correct, according to the catalogue authors
+* `UNCLEAR`: This class represents classification that were unclear, according to the catalogue authors, or may not be correct
   * `UNCLEAR(XRAY)`
   * `UNCLEAR(IR)`
   * `UNCLEAR(POINTLIKE)`
@@ -142,7 +142,7 @@ For tables with this information, a manual verification was made in order to cla
 
 ## Merging catalogues
 
-After all VizieR and HEASARC catalogues were downloaded and processed, they were concatenated with the [SDSS DR17](http://skyserver.sdss.org/CasJobs/), [PRIMUS](https://primus.ucsd.edu/version1.html), [NED](https://ned.ipac.caltech.edu/), [HYPERLEDA](https://leda.univ-lyon1.fr/), and [2dFLenS](https://2dflens.swin.edu.au/) catalogues.
+After all VizieR and HEASARC catalogues were downloaded and processed, they were concatenated with the [SDSS DR17](http://skyserver.sdss.org/CasJobs/), [PRIMUS](https://primus.ucsd.edu/version1.html), [NED](https://ned.ipac.caltech.edu/), [HYPERLEDA](https://leda.univ-lyon1.fr/), [2dFLenS](https://2dflens.swin.edu.au/), [GLADE+](https://glade.elte.hu/), and [DESI](https://datalab.noirlab.edu/desi/access.php) catalogues.
 
 ## Duplicate removal procedure
 
