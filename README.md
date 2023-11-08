@@ -144,7 +144,7 @@ For tables with this information, a manual verification was made in order to cla
 
 ## Merging catalogues
 
-After all VizieR and HEASARC catalogues were downloaded and processed, they were concatenated with the [SDSS DR17](http://skyserver.sdss.org/CasJobs/), [PRIMUS](https://primus.ucsd.edu/version1.html), [NED](https://ned.ipac.caltech.edu/), [HYPERLEDA](https://leda.univ-lyon1.fr/), [2dFLenS](https://2dflens.swin.edu.au/), [GLADE+](https://glade.elte.hu/), and [DESI](https://datalab.noirlab.edu/desi/access.php) catalogues.
+After all VizieR and HEASARC catalogues were downloaded and processed, they were concatenated with the [SDSS DR18](http://skyserver.sdss.org/CasJobs/), [PRIMUS](https://primus.ucsd.edu/version1.html), [NED](https://ned.ipac.caltech.edu/), [HYPERLEDA](https://leda.univ-lyon1.fr/), [2dFLenS](https://2dflens.swin.edu.au/), [GLADE+](https://glade.elte.hu/), and [DESI](https://datalab.noirlab.edu/desi/access.php) catalogues.
 
 ## Duplicate removal procedure
 
