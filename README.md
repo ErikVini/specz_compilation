@@ -26,7 +26,7 @@ The columns available are:
 * `original_class_spec`: original spectroscopic classification of the object (before grouping),
 * `source`: TAP service and catalogue from which the information was obtained.
 
-Not all catalogues used contain information about the redshift error, quality flags, and classes. In these situations the value is left empty.
+Not all catalogues used contain information about the redshift error, quality flags, and/or classes. In these situations the value is left empty.
 
 ## How it was done
 A script written in Python is used to download all catalogues from the VizieR and HEASARC table access protocol (TAP) services using the following queries:
