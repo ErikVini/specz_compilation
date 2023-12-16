@@ -86,7 +86,7 @@ These queries are used to obtain the table names, respective column names (for c
 Before downloading all possible tables, and since there are duplicates, a pre-processing is done to remove tables that:
 * The `z` column does not correspond to spectroscopic redshifts (such as metallicities or distance above the plane of the galaxy, for example)
 * The `e_z`, `f_z`, or `class` columns does not correspond to the information needed
-Example: some tables have flags in magnitudes, but they share the same unified content descriptors (UCDs) with spectroscopic reddshift UCD, so the table may be downloaded with the wrong information.
+Example: some tables have flags in magnitudes, but they share the same unified content descriptors (UCDs) with spectroscopic redshift UCD, so the table may be downloaded with the wrong information.
 
 This process is done for VizieR and HEASARC. In both cases any tables with zero objects are removed.
 
