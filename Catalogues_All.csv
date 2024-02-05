@@ -3797,3 +3797,10 @@ HEASARC,atlas2p3gh,AT Large Area Survey (ATLAS) ELAIS-S1 & CDF-S 2.3-GHz Source 
 HEASARC,chandfs7ms,Chandra Deep Field-South 7-Megasecond X-Ray Source Catalog
 HEASARC,pdsoid,Phoenix Deep Survey Optical and Near-Infrared Counterparts Catal
 HEASARC,morx,Million Optical/Radio/X-Ray Associations Catalog
+EXTERNAL,SDSSDR18,"Sloan Digital Sky Survey Data Release 18 (Almeida, A. et al. 2023)"
+EXTERNAL,PRIMUS,"The PRIsm MUlti-object Survey (PRIMUS) (Coil, A. L. et al. 2011"
+EXTERNAL,NED,"NASA/IPAC Extragalactic Database (NED) (Helou, G. et al. 1991)"
+EXTERNAL,HYPERLEDA,"HyperLeda (Makarov, D. et al. 2014)"
+EXTERNAL,2dFLenS,"2-degree Field Lensing Survey (Blake, C. et al. 2016)"
+EXTERNAL,GLADE+,"GLADE+: An Extended Galaxy Catalogue for Multimessenger Searches with Advanced Gravitational-wave Detectors (Dalya, G. et al. 2018)"
+EXTERNAL,DESI,"Dark Energy Spectroscopic Instrument (DESI) (Aghamousa, A. et al. 2016)"

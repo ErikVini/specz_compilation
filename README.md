@@ -3,18 +3,18 @@
 ## Description
 This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below +5 degrees) focused on galaxies.
 
-This compilation contains 3800+ catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [SDSS](http://skyserver.sdss.org/CasJobs/), and others. After removing duplicates, the number of catalogues in the final compination is 1727 and the total number of objects is 5624559, including galaxies, stars, QSOs, and other object types. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`Catalogues_All.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/Catalogues_All.csv) and [`Catalogues_Used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/Catalogues_Used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
+This compilation contains 3800+ catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [SDSS](http://skyserver.sdss.org/CasJobs/), and others. After removing duplicates, the number of catalogues in the final compination is 1765 and the total number of objects is 5624559, including galaxies, stars, QSOs, and other object types. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`Catalogues_All.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/Catalogues_All.csv) and [`Catalogues_Used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/Catalogues_Used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
 
 The catalogue can be downloaded via Google Drive in the "[Releases](https://github.com/ErikVini/SpecZCompilation/releases/latest)" section.
 
 Compilation numbers:
-* `GALAXY`: 2673964
-* `STAR`: 1538133
-* `SUPERNOVAE`: 1423
-* `QSO`: 109505
-* `AGN`: 6407
+* `GALAXY`: 2824922
+* `STAR`: 1540016
+* `QSO`: 250681
+* `AGN`: 7556
+* `SUPERNOVAE`: 1393
 * `GLOBCLUSTER`: 438
-* `UNCLEAR` (described below): 1294689
+* `UNCLEAR` (described below): 1153293
 
 The columns available are:
 * `RA`: right ascension (degrees),
@@ -159,7 +159,6 @@ Before removing duplicates, the table was sorted in order to keep the objects wi
 * objects with `class_spec`,
 * objects with `f_z`, and
 * objects without `e_z`, `f_z` or `class_spec`.
-Whenever the spectroscopic redshift error was available, the objects that block were sorted according to the error value (from lowest to highest).
 
 An internal match is done using the `Sky+X` match parameter with `RA`, `DEC` and `z` with a 2 arcsecond maximum separation in coordinates and 0.002 in redshift, keeping only the first ocurrence (thus the importance of the sorting procedure above):
 ```
