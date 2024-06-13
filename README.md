@@ -6,6 +6,8 @@
 [![GitHub tag](https://img.shields.io/github/tag/ErikVini/SpecZCompilation?include_prereleases=&sort=semver&color=blue)](https://github.com/ErikVini/SpecZCompilation/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
+[![Google Drive - Download](https://img.shields.io/badge/Google_Drive-Download-4688F4?logo=googledrive&logoColor=FFD04B)](https://drive.google.com/file/d/1h4DmddmsLVkBqRMJCAOkLjk2ayu9OjWk/view)
+
 </div>
 
 ## Description
