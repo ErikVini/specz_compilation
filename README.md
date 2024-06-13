@@ -1,5 +1,7 @@
 # The Southern-Hemisphere Spectroscopic Redshift Compilation
----
+
+[![DOI](https://zenodo.org/badge/570681110.svg)](https://zenodo.org/doi/10.5281/zenodo.11641314)
+
 ## Description
 This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below +5 degrees) focused on galaxies. 
 
