@@ -1,7 +1,7 @@
 # The Southern-Hemisphere Spectroscopic Redshift Compilation
 <div align="center">
  
-[![DOI](https://zenodo.org/badge/570681110.svg)](https://zenodo.org/doi/10.5281/zenodo.11641314)
+[![DOI - 10.5281/zenodo.11641314](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.11641314-0677b8?logo=doi&logoColor=white)](https://zenodo.org/doi/10.5281/zenodo.11641314)
 
 [![GitHub tag](https://img.shields.io/github/tag/ErikVini/SpecZCompilation?include_prereleases=&sort=semver&color=blue)](https://github.com/ErikVini/SpecZCompilation/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
