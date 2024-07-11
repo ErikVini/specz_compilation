@@ -18,13 +18,13 @@ This compilation contains 3800+ catalogues of spectroscopic redshifts from servi
 The catalogue can be downloaded via Google Drive in the "[Releases](https://github.com/ErikVini/SpecZCompilation/releases/latest)" section.
 
 Compilation numbers:
-* `GALAXY`: 2824922
-* `STAR`: 1540016
-* `QSO`: 250681
-* `AGN`: 7556
-* `SUPERNOVAE`: 1393
-* `GLOBCLUSTER`: 438
-* `UNCLEAR` (described below): 1153293
+* `STAR`: 4812282
+* `GALAXY`: 2548065
+* `QSO`: 507894
+* `AGN`: 35192
+* `GLOBCLUSTER`: 2245
+* `SUPERNOVAE`: 1948
+* `UNCLEAR` (described below): 529602
 
 The columns available are:
 * `RA`: right ascension (degrees),
@@ -39,64 +39,12 @@ The columns available are:
 Not all catalogues used contain information about the redshift error, quality flags, and/or classes. In these situations the value is left empty.
 
 ## How it was done
-A script written in Python is used to download all catalogues from the VizieR and HEASARC table access protocol (TAP) services using the following queries:
-
-RA columns:
-```
-SELECT t.table_name, c.column_name AS ra_col, c.description as ra_desc
-FROM tap_schema.tables AS t
-JOIN tap_schema.columns AS c USING (table_name)
-WHERE c.ucd = 'pos.eq.ra;meta.main'
-```
-
-DEC columns:
-```
-SELECT t.table_name, c.column_name AS dec_col, c.description as dec_desc
-FROM tap_schema.tables AS t
-JOIN tap_schema.columns AS c USING (table_name)
-WHERE c.ucd = 'pos.eq.dec;meta.main'
-```
-
-Redshift tables:
-```
-SELECT t.table_name, t.description, c.column_name AS zcol, c.description as zcol_desc
-FROM tap_schema.tables AS t
-JOIN tap_schema.columns AS c USING (table_name)
-WHERE c.ucd = 'src.redshift'
-```
-
-Redshift error columns:
-```
-SELECT t.table_name, c.column_name AS zerr_col, c.description as zerr_desc
-FROM tap_schema.tables AS t
-JOIN tap_schema.columns AS c USING (table_name)
-WHERE c.ucd = 'stat.error;src.redshift'
-```
-
-Redshift flag columns:
-```
-SELECT t.table_name, t.description, c.column_name AS zflg_col, c.description as zflg_desc
-FROM tap_schema.tables AS t
-JOIN tap_schema.columns AS c USING (table_name)
-WHERE c.ucd = 'meta.code.error;src.redshift' OR c.ucd = 'meta.code.qual;src.redshift' -- For VizieR
-WHERE c.ucd = 'meta.code;src.redshift' -- For HEASARC
-```
-
-Morphological classification columns:
-```
-SELECT t.table_name, c.column_name AS class_col, c.description as class_desc
-FROM tap_schema.tables AS t
-JOIN tap_schema.columns AS c USING (table_name)
-WHERE c.ucd = 'meta.code.class' -- For VizieR
-WHERE c.ucd = 'src.class' -- For HEASARC
-```
-
-These queries are used to obtain the table names, respective column names (for coordinates, redshift, redshift error, and class) and their descriptions. This information is used to generate another table which contains all information needed to query for the objects (`RA`, `DEC`, `z`, `e_z`, `f_z`, `class_spec`).
+A script written in Python is used to download all catalogues from the VizieR and HEASARC table access protocol (TAP) services using a series of queries to obtain the table names, respective column names for coordinates, redshift, redshift error, and class, and their descriptions. This information is used to generate another table which contains all information needed to query for the objects (`RA`, `DEC`, `z`, `e_z`, `f_z`, `class_spec`).
 
 Before downloading all possible tables, and since there are duplicates, a pre-processing is done to remove tables that:
 * The `z` column does not correspond to spectroscopic redshifts (such as metallicities or distance above the plane of the galaxy, for example)
 * The `e_z`, `f_z`, or `class` columns does not correspond to the information needed
-Example: some tables have flags in magnitudes, but they share the same unified content descriptors (UCDs) with spectroscopic redshift UCD, so the table may be downloaded with the wrong information.
+Example: some tables have flags in magnitudes (e.g. in the z-band), but they share the same unified content descriptor (UCD) with spectroscopic redshift UCD, so the table may be downloaded with the wrong information.
 
 This process is done for VizieR and HEASARC. In both cases any tables with zero objects are removed.
 
@@ -104,7 +52,7 @@ For VizieR, a correction for J1950 coordinates is applied. Also, any tables that
 
 ## Classes
 
-For tables that have this information, a manual procedure was applied to group classes into `STAR`, `GALAXY`, `QSO`, `AGN`, `UNCLEAR`, or `GLOBCLUSTER`. When avaliable, a few sub-classes are included (in order of quantity):
+For tables that have this information, a manual procedure was applied to group classes into `STAR`, `GALAXY`, `QSO`, `AGN`, `GLOBCLUSTER`, or `UNCLEAR`. When avaliable, sub-classes are included. Some examples are:
 
 * `GALAXY`
   * `GALAXY(SF)`: Star-forming galaxies
@@ -148,17 +96,21 @@ For tables that have this information, a manual procedure was applied to group c
 
 The `UNCLEAR` class is reserved for objects where the classification was not clear enough to be included in the other six groups.
 
+Be aware that this classification may change, and an update to class names to align them with the [SIMBAD object types](https://simbad.cds.unistra.fr/Pages/guide/otypes.htx) is underway.
+
 ## Flags
 
-For tables with this information, a manual verification was made in order to classify flags as `KEEP`, `REMOVE`, or `UNVERIFIED`. The `KEEP` flag indicates that the spectroscopic redshift is reliable according to the authors of the catalogue. The original flag is maintained whitin parenthesis after the `KEEP`, `REMOVE`, or `UNVERIFIED` words.
+For tables with this information, a manual verification was made in order to classify flags as `KEEP`, or `REMOVE`. The `KEEP` flag indicates that the spectroscopic redshift is reliable according to the authors of the catalogue and the `REMOVE` indicates that the given measurement is not reliable. The original flag is maintained whitin parenthesis after the `KEEP` or `REMOVE` words.
 
 ## Merging catalogues
 
-After all VizieR and HEASARC catalogues were downloaded and processed, they were concatenated with the [SDSS DR18](http://skyserver.sdss.org/CasJobs/), [PRIMUS](https://primus.ucsd.edu/version1.html), [NED](https://ned.ipac.caltech.edu/), [HYPERLEDA](https://leda.univ-lyon1.fr/), [2dFLenS](https://2dflens.swin.edu.au/), [GLADE+](https://glade.elte.hu/), and [DESI](https://datalab.noirlab.edu/desi/access.php) catalogues.
+After all VizieR and HEASARC catalogues were downloaded and processed, they were concatenated with the [SDSS DR18](http://skyserver.sdss.org/CasJobs/), [PRIMUS](https://primus.ucsd.edu/version1.html), [NED](https://ned.ipac.caltech.edu/), [HECATE](https://hecate.ia.forth.gr/) [2dFLenS](https://2dflens.swin.edu.au/), [GLADE+](https://glade.elte.hu/),  [DESI](https://datalab.noirlab.edu/desi/access.php), and the Maddox et al. spectroscopic redshifts for the Fornax Cluster (Maddox, N. et al. 2019) catalogues.
 
 ## Duplicate removal procedure
 
-After concatenating all catalogues, the resulting catalogue will inevitably have duplicate objects. To try and remove those objects the [STILTS](http://www.star.bris.ac.uk/~mbt/stilts/sun256/index.html) software was used.
+After concatenating all catalogues, the resulting catalogue will inevitably have duplicate objects. To try and remove those objects, the `Python` package [`Scipy`](https://scipy.org/) was used.
+
+<!-- To try and remove those objects the [STILTS](http://www.star.bris.ac.uk/~mbt/stilts/sun256/index.html) software was used. -->
 
 Before removing duplicates, the table was sorted in order to keep the objects with most information at the top. The catalogue is then composed of blocks:
 * Objects with `e_z`, `f_z`, and `class_spec`,
@@ -170,10 +122,14 @@ Before removing duplicates, the table was sorted in order to keep the objects wi
 * objects with `f_z`, and
 * objects without `e_z`, `f_z` or `class_spec`.
 
-An internal match is done using the `Sky+X` match parameter with `RA`, `DEC` and `z` with a 2 arcsecond maximum separation in coordinates and 0.002 in redshift, keeping only the first ocurrence (thus the importance of the sorting procedure above):
+Inside each block, a priority is given to the object types in the order `GALAXY`, `AGN`, `SUPERNOVAE`, `QSO`, `STAR`, `GLOBCLUSTER`, `UNCLEAR`, and the remaining objects, and to the spectroscopic redshift flag (`KEEP`, `REMOVE`). This way the duplicate removal procedure tries to keep the most galaxies and gives priority to objects with a quality flag information.
+
+An internal match is done using the sky coordinates with a 1 arcsecond maximum separation, keeping only the first ocurrence (thus the importance of the sorting procedure above).
+
+<!-- An internal match is done using the `Sky+X` match parameter with `RA`, `DEC` and `z` with a 2 arcsecond maximum separation in coordinates and 0.002 in redshift, keeping only the first ocurrence (thus the importance of the sorting procedure above):
 ```
 java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='2 0.002' action=keep1 in=InputTable.csv out=OutputTable.csv
-```
+``` -->
 
 ## Known issues
 
@@ -183,10 +139,10 @@ The HEASARC table descriptions are incomplete. There seems to be a limit to how 
 
 ## The final catalogue
 
-![Distribution of objects in the sky. Image also available in "Images" folder.](Images/AllSky_Spec_Scatter.png?raw=true "Distribution of objects in the sky.")
+![Distribution of objects in the sky. Image also available in "Images" folder.](Images/all_sky_specz_map_2024-06-20.png?raw=true "Distribution of objects in the sky.")
 
-![Number of objects per class. Image also available in "Images" folder.](Images/Class_Distribution.png?raw=true "Number of objects per class.")
+![Number of objects per class. Image also available in "Images" folder.](Images/class_distribution_2024-06-20.png?raw=true "Number of objects per class.")
 
-![Number of objects per flag. Image also available in "Images" folder.](Images/Flags_Distribution.png?raw=true "Number of objects per flag.")
+![Number of objects per flag. Image also available in "Images" folder.](Images/flags_distribution_2024-06-20.png?raw=true "Number of objects per flag.")
 
-![Distribution of redshifts per class. Image also available in "Images" folder.](Images/SpecZ_Distribution.png?raw=true "Distribution of redshifts per class.")
+![Distribution of redshifts per class. Image also available in "Images" folder.](Images/specz_distribution_2024-06-20.png?raw=true "Distribution of redshifts per class.")
