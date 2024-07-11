@@ -11,7 +11,9 @@
 </div>
 
 ## Description
-This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below +10 degrees) focused on galaxies. The goal of this compilation is to provide a training sample for a machine-learning photometric redshift model (de Lima et al. 2022, [arXiv link](https://arxiv.org/abs/2110.13901)) to be used in the [Southern-Local Universe Survey](https://splus.cloud/) (SPLUS, Mendes de Oliveira et al. 2019, [arXiv link](https://arxiv.org/abs/1907.01567)).
+This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below +10 degrees) focused on galaxies. 
+
+The goal of this compilation is to provide a training sample for a machine-learning photometric redshift model (de Lima et al. 2022, [arXiv link](https://arxiv.org/abs/2110.13901)) to be used in the [Southern-Local Universe Survey](https://splus.cloud/) (SPLUS, Mendes de Oliveira et al. 2019, [arXiv link](https://arxiv.org/abs/1907.01567)).
 
 This compilation contains 5000+ catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [SDSS](http://skyserver.sdss.org/CasJobs/), and others. After removing duplicates, the number of catalogues in the final compination is 1852 and the total number of objects is 8437460, including galaxies, stars, QSOs, and other object types. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`reference_catalogues_all.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/reference_catalogues_all.csv), [`external_catalogues_used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/external_catalogues_used.csv), and [`reference_catalogues_used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/reference_catalogues_used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
 
