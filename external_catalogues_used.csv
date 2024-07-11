@@ -1,0 +1,9 @@
+TAP_service,table_name,objects,description
+EXTERNAL,SDSSDR18,990266,"Sloan Digital Sky Survey Data Release 18 (Almeida, A. et al. 2023)"
+EXTERNAL,PRIMUS,213696,"The PRIsm MUlti-object Survey (PRIMUS) (Coil, A. L. et al. 2011"
+EXTERNAL,NED,871449,"NASA/IPAC Extragalactic Database (NED) (Helou, G. et al. 1991)"
+EXTERNAL,HECATE,204733,"Heraklion Extragalactic Catalogue (HECATE) (Kovlakas, K.. et al. 2021)"
+EXTERNAL,MADDOX,16856,"A spectroscopic census of the Fornax cluster and beyond (Maddox, N. et al. 2019)"
+EXTERNAL,2dFLenS,70079,"2-degree Field Lensing Survey (Blake, C. et al. 2016)"
+EXTERNAL,GLADE+,147172,"GLADE+: An Extended Galaxy Catalogue for Multimessenger Searches with Advanced Gravitational-wave Detectors (Dalya, G. et al. 2018)"
+EXTERNAL,DESI,2044588,"Dark Energy Spectroscopic Instrument (DESI) (Aghamousa, A. et al. 2016)"
