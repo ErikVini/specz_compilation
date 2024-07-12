@@ -101,7 +101,7 @@ For tables that have this information, a manual procedure was applied to group c
 The `UNCLEAR` class is reserved for objects where the classification was not clear enough to be included in the other six groups. Some other details on the classification are:
 
 * Classes ending with `(SIMBAD)`: these objects did not contain spectroscopic class information until the 'reordening by missing information' step. They were crossmatched with the SIMBAD database and its class is adopted if there is a match.
-* Classes ending with `(FULL)`: these objects received a classification from the entire catalogue (the source). For example, if a catalogue is named "Spectroscopic redshifts for galaxies" and there is not spectroscopic class information, its objects are classified as `GALAXY (FULL)`.
+* Classes ending with `(FULL)`: these objects received a classification from the entire catalogue (the source). For example, if a catalogue is named "Spectroscopic redshifts for galaxies" and there is no spectroscopic class information, its objects are classified as `GALAXY (FULL)`.
 
 Be aware that this classification may change, and an update to class names to align them with the [SIMBAD object types](https://simbad.cds.unistra.fr/Pages/guide/otypes.htx) is underway.
 
