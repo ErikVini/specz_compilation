@@ -12,6 +12,21 @@
 
 </div>
 
+---
+
+- [The Southern-Hemisphere Spectroscopic Redshift Compilation](#the-southern-hemisphere-spectroscopic-redshift-compilation)
+  - [Description](#description)
+  - [How it was done](#how-it-was-done)
+  - [Classes](#classes)
+  - [Flags](#flags)
+  - [Merging catalogues](#merging-catalogues)
+  - [Duplicate removal procedure](#duplicate-removal-procedure)
+  - [Known issues](#known-issues)
+  - [The final catalogue](#the-final-catalogue)
+  - [How to cite](#how-to-cite)
+
+---
+
 ## Description
 This page is reserved for releases of a compilation of spectrocopic redshifts for the Southern Hemisphere (declination below +10 degrees) focused on galaxies. 
 
@@ -153,3 +168,21 @@ The HEASARC table descriptions are incomplete. There seems to be a limit to how 
 ![Number of objects per flag. Image also available in "Images" folder.](Images/flags_distribution_2024-06-20.png?raw=true "Number of objects per flag.")
 
 ![Distribution of redshifts per class. Image also available in "Images" folder.](Images/specz_distribution_2024-06-20.png?raw=true "Distribution of redshifts per class.")
+
+## How to cite
+
+If you use this compilation in your work, please use the following citation:
+
+BibTex:
+```
+@dataset{delima_specz_compilation,
+  author       = {Erik Vinicius Rodrigues de Lima},
+  title        = {{ErikVini/specz\_compilation: Southern Hemisphere 
+                   Spectrocopic Redshift Compilation}},
+  month        = jul,
+  year         = 2024,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.12728524},
+  url          = {https://doi.org/10.5281/zenodo.12728524}
+}
+```
