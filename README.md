@@ -1,5 +1,7 @@
 # The Southern-Hemisphere Spectroscopic Redshift Compilation
 <div align="center">
+
+<!-- https://michaelcurrin.github.io/badge-generator/#/generic -->
  
 [![DOI - 10.5281/zenodo.11641314](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.11641314-0677b8?logo=doi&logoColor=white)](https://zenodo.org/doi/10.5281/zenodo.11641314)
 
