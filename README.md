@@ -177,14 +177,13 @@ If you use this compilation in your work, please use the following citation:
 
 BibTex:
 ```
-@dataset{delima_specz_compilation,
+@dataset{specz_compilation_zenodo,
   author       = {Erik Vinicius Rodrigues de Lima},
-  title        = {{ErikVini/specz\_compilation: Southern Hemisphere 
-                   Spectrocopic Redshift Compilation}},
-  month        = jul,
+  title        = {ErikVini/specz\_compilation: Southern Hemisphere Spectrocopic Redshift Compilation},
+  month        = nov,
   year         = 2024,
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.12728524},
-  url          = {https://doi.org/10.5281/zenodo.12728524}
+  url          = {https://doi.org/10.5281/zenodo.12728524},
 }
 ```
