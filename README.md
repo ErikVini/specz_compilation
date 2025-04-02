@@ -76,7 +76,21 @@ For VizieR, a correction for J1950 coordinates is applied. Also, any tables that
 
 ## Classes
 
-For tables that have this information, a manual procedure was applied to group classes into `STAR`, `GALAXY`, `AGN`, and others. The nomenclature we used loosely follows the SIMBAD object type classification ([link](https://simbad.cds.unistra.fr/guide/otypes.htx)). When avaliable, sub- and subsub-classes are included. Some examples are
+For tables that have this information, a manual procedure was applied to group classes into `STAR`, `GALAXY`, `AGN`, and others. The nomenclature we used loosely follows the SIMBAD object type classification ([link](https://simbad.cds.unistra.fr/guide/otypes.htx)). When avaliable, sub- and subsub-classes are included. Some examples are:
+
+* GALAXY: 9574034
+  * BINARY: 446659
+  * ClG: 49698
+  * GrG: 32637
+* UNCLEAR: 2573150
+* STAR: 1253559
+  * WD: 1577
+  * LM*: 977
+  * Cl*: 89
+* AGN: 979041
+  * QSO: 910382
+  * QSO?: 37826
+  * SyG: 5866
 
 <!-- For tables that have this information, a manual procedure was applied to group classes into `STAR`, `GALAXY`, `QSO`, `AGN`, `GLOBCLUSTER`, or `UNCLEAR`. When avaliable, sub-classes are included. Some examples are:
 
@@ -124,6 +138,7 @@ The `UNCLEAR` class is reserved for objects where the classification was not cle
 
 * Subsublasses with `SIMBAD`: these objects did not contain spectroscopic class information until the 'reordening by missing information' step. They were crossmatched with the SIMBAD database and its class is adopted if there is a match.
 * Subsublasses with `FULL`: these objects received a classification from the entire catalogue (the source). For example, if a catalogue is named "Spectroscopic redshifts for galaxies" and there is no spectroscopic class information, its objects are classified as `GALAXY` with subsubclass `FULL`.
+* Classes, subclasses, or subsubclasses containing `?` indicate a candidate of that class.
 
 <!-- Be aware that this classification may change, and an update to class names to align them with the [SIMBAD object types](https://simbad.cds.unistra.fr/Pages/guide/otypes.htx) is underway. -->
 
@@ -150,6 +165,7 @@ Before removing duplicates, the table was sorted in order to keep the objects wi
 * objects with `class_spec`,
 * objects with `f_z`, and
 * objects without `e_z`, `f_z` or `class_spec`.
+
 Inside each block, the objects are also sorted according to the number of significant digits in the spectroscopic redshift value.
 
 Moreover, a priority is given to the object types in the order `GALAXY`, `AGN`, `SUPERNOVAE`, `QSO`, `STAR`, `GLOBCLUSTER`, `UNCLEAR`, and the remaining objects, and to the spectroscopic redshift flag ("keep" > "remove" > "unclear").
