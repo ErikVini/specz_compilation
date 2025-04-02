@@ -173,13 +173,13 @@ The HEASARC table descriptions are incomplete. There seems to be a limit to how 
 
 ## The final catalogue
 
-![Distribution of objects in the sky. Image also available in "Images" folder.](Images/all_sky_specz_map_2024-06-20.png?raw=true "Distribution of objects in the sky.")
+![Distribution of objects in the sky. Image also available in "Images" folder.](Images/all_sky_specz_map_20250327.png?raw=true "Distribution of objects in the sky.")
 
-![Number of objects per class. Image also available in "Images" folder.](Images/class_distribution_2024-06-20.png?raw=true "Number of objects per class.")
+![Number of objects per class. Image also available in "Images" folder.](Images/class_distribution_20250327.png?raw=true "Number of objects per class.")
 
-![Number of objects per flag. Image also available in "Images" folder.](Images/flags_distribution_2024-06-20.png?raw=true "Number of objects per flag.")
+![Number of objects per flag. Image also available in "Images" folder.](Images/flags_distribution_20250327.png?raw=true "Number of objects per flag.")
 
-![Distribution of redshifts per class. Image also available in "Images" folder.](Images/specz_distribution_2024-06-20.png?raw=true "Distribution of redshifts per class.")
+![Distribution of redshifts per class. Image also available in "Images" folder.](Images/specz_distribution_20250327.png?raw=true "Distribution of redshifts per class.")
 
 ## How to cite
 
