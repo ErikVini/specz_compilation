@@ -34,33 +34,36 @@ This page is reserved for releases of a compilation of spectrocopic redshifts fo
 
 The goal of this compilation is to provide a training sample for a machine-learning photometric redshift model (de Lima et al. 2022, [arXiv link](https://arxiv.org/abs/2110.13901)) to be used in the [Southern-Photometric Local Universe Survey](https://splus.cloud/) (SPLUS, Mendes de Oliveira et al. 2019, [arXiv link](https://arxiv.org/abs/1907.01567)).
 
-This compilation contains 5000+ catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [SDSS](http://skyserver.sdss.org/CasJobs/), and others. After removing duplicates, the number of catalogues in the final compination is 1852 and the total number of objects is 8437460, including galaxies, stars, QSOs, and other object types. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`reference_catalogues_all.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/reference_catalogues_all.csv), [`external_catalogues_used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/external_catalogues_used.csv), and [`reference_catalogues_used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/reference_catalogues_used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
+This compilation contains 5000+ catalogues of spectroscopic redshifts from services such as [VizieR](http://vizier.cds.unistra.fr/), [HEASARC](https://heasarc.gsfc.nasa.gov/), [SDSS](http://skyserver.sdss.org/CasJobs/), [DESI DR1](https://datalab.noirlab.edu/desi/) and others. After removing duplicates, the number of catalogues in the final compination is 2324 and the total number of objects is 16241177, including galaxies, stars, QSOs, and other object types. The catalogue name in the TAP services, work titles, number of objects, and authors are present in the files [`reference_catalogues_all.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/reference_catalogues_all.csv) and [`reference_catalogues_used.csv`](https://github.com/ErikVini/SpecZCompilation/blob/4aea730686da8e0df6a39b4e235a9aed6abdfb09/reference_catalogues_used.csv) for all downloaded tables and the ones used in the final compilation (after removing duplicates) respectively.
 
-The catalogue can be downloaded via Google Drive in the "[Releases](https://github.com/ErikVini/SpecZCompilation/releases/latest)" section.
+The catalogue can be downloaded via Zenodo: https://zenodo.org/records/12728524
 
 Compilation numbers:
-* `STAR`: 4812282
-* `GALAXY`: 2548065
-* `QSO`: 507894
-* `AGN`: 35192
-* `GLOBCLUSTER`: 2245
-* `SUPERNOVAE`: 1948
-* `UNCLEAR` (described below): 529602
+* `GALAXY`: 9577253
+* `STAR`: 3024700
+* `QSO`: 948712
+* `GLOBCLUSTER`: 27538
+* `SUPERNOVAE`: 6437
+* `UNCLEAR` (described below): 2573150
 
 The columns available are:
 * `RA`: right ascension (degrees),
 * `DEC`: declination (degrees),
 * `z`: spectroscopic redshift,
+* `z_significant_figures`: the numerical precision of the redshift,
 * `e_z`: error in the spectroscopic redshift,
 * `f_z`: flag for the spectroscopic redshift quality,
 * `class_spec`: spectroscopic classification of the object,
+* `subclass`: subclass of the object,
+* `subsubclass`: subsubclass of the object,
 * `original_class_spec`: original spectroscopic classification of the object (before grouping),
+* `original_f_z`: original redshift quality flag of the object,
 * `source`: TAP service and catalogue from which the information was obtained.
 
 Not all catalogues used contain information about the redshift error, quality flags, and/or classes. In these situations the value is left empty.
 
 ## How it was done
-A script written in Python is used to download all catalogues from the VizieR and HEASARC table access protocol (TAP) services using a series of queries to obtain the table names, respective column names for coordinates, redshift, redshift error, and class, and their descriptions. This information is used to generate another table which contains all information needed to query for the objects (`RA`, `DEC`, `z`, `e_z`, `f_z`, `class_spec`).
+A script written in Python is used to download all catalogues from the VizieR and HEASARC table access protocol (TAP) services using a series of queries to obtain the table names, respective column names for coordinates, redshift, redshift error, and class, and their descriptions. This information is used to generate another table which contains all information needed to query for the objects.
 
 Before downloading all possible tables, and since there are duplicates, a pre-processing is done to remove tables that:
 * The `z` column does not correspond to spectroscopic redshifts (such as metallicities or distance above the plane of the galaxy, for example)
@@ -69,11 +72,13 @@ Example: some tables have flags in magnitudes (e.g. in the z-band), but they sha
 
 This process is done for VizieR and HEASARC. In both cases any tables with zero objects are removed.
 
-For VizieR, a correction for J1950 coordinates is applied. Also, any tables that represent distances as `cz` also have the redshift and error values corrected.
+For VizieR, a correction for J1950 coordinates is applied. Also, any tables that provide radial velocities instead of redshifts have their cz values converted to z.
 
 ## Classes
 
-For tables that have this information, a manual procedure was applied to group classes into `STAR`, `GALAXY`, `QSO`, `AGN`, `GLOBCLUSTER`, or `UNCLEAR`. When avaliable, sub-classes are included. Some examples are:
+For tables that have this information, a manual procedure was applied to group classes into `STAR`, `GALAXY`, `AGN`, and others. The nomenclature we used loosely follows the SIMBAD object type classification ([link](https://simbad.cds.unistra.fr/guide/otypes.htx)). When avaliable, sub- and subsub-classes are included. Some examples are
+
+<!-- For tables that have this information, a manual procedure was applied to group classes into `STAR`, `GALAXY`, `QSO`, `AGN`, `GLOBCLUSTER`, or `UNCLEAR`. When avaliable, sub-classes are included. Some examples are:
 
 * `GALAXY`
   * `GALAXY(SF)`: Star-forming galaxies
@@ -113,18 +118,18 @@ For tables that have this information, a manual procedure was applied to group c
   * `UNCLEAR(ASTEROID)`
   * `UNCLEAR(HII)`
   * `UNCLEAR(EmLS)`
-  * `UNCLEAR(Sy2)`
+  * `UNCLEAR(Sy2)` -->
 
 The `UNCLEAR` class is reserved for objects where the classification was not clear enough to be included in the other six groups. Some other details on the classification are:
 
-* Classes ending with `(SIMBAD)`: these objects did not contain spectroscopic class information until the 'reordening by missing information' step. They were crossmatched with the SIMBAD database and its class is adopted if there is a match.
-* Classes ending with `(FULL)`: these objects received a classification from the entire catalogue (the source). For example, if a catalogue is named "Spectroscopic redshifts for galaxies" and there is no spectroscopic class information, its objects are classified as `GALAXY (FULL)`.
+* Subsublasses with `SIMBAD`: these objects did not contain spectroscopic class information until the 'reordening by missing information' step. They were crossmatched with the SIMBAD database and its class is adopted if there is a match.
+* Subsublasses with `FULL`: these objects received a classification from the entire catalogue (the source). For example, if a catalogue is named "Spectroscopic redshifts for galaxies" and there is no spectroscopic class information, its objects are classified as `GALAXY` with subsubclass `FULL`.
 
-Be aware that this classification may change, and an update to class names to align them with the [SIMBAD object types](https://simbad.cds.unistra.fr/Pages/guide/otypes.htx) is underway.
+<!-- Be aware that this classification may change, and an update to class names to align them with the [SIMBAD object types](https://simbad.cds.unistra.fr/Pages/guide/otypes.htx) is underway. -->
 
 ## Flags
 
-For tables with this information, a manual verification was made in order to classify flags as `KEEP`, or `REMOVE`. The `KEEP` flag indicates that the spectroscopic redshift is reliable according to the authors of the catalogue and the `REMOVE` indicates that the given measurement is not reliable. The original flag is maintained whitin parenthesis after the `KEEP` or `REMOVE` words.
+For tables with this information, a manual verification was made in order to classify flags as "keep", represented by the value `1`, "remove", represented by the value `0`, or unknown/not available/unclear, represented by the value `-1`. The "keep" flag indicates that the spectroscopic redshift is reliable according to the authors of the catalogue and the "remove indicates that the given measurement is not reliable. The original flag is maintained with the `original_f_z` column.
 
 ## Merging catalogues
 
@@ -145,8 +150,11 @@ Before removing duplicates, the table was sorted in order to keep the objects wi
 * objects with `class_spec`,
 * objects with `f_z`, and
 * objects without `e_z`, `f_z` or `class_spec`.
+Inside each block, the objects are also sorted according to the number of significant digits in the spectroscopic redshift value.
 
-Inside each block, a priority is given to the object types in the order `GALAXY`, `AGN`, `SUPERNOVAE`, `QSO`, `STAR`, `GLOBCLUSTER`, `UNCLEAR`, and the remaining objects, and to the spectroscopic redshift flag (`KEEP`, `REMOVE`). This way the duplicate removal procedure tries to keep the most galaxies and gives priority to objects with a quality flag information.
+Moreover, a priority is given to the object types in the order `GALAXY`, `AGN`, `SUPERNOVAE`, `QSO`, `STAR`, `GLOBCLUSTER`, `UNCLEAR`, and the remaining objects, and to the spectroscopic redshift flag ("keep" > "remove" > "unclear").
+
+<!-- This way the duplicate removal procedure tries to keep the most galaxies and gives priority to objects with a quality flag information. -->
 
 An internal match is done using the sky coordinates with a 1 arcsecond maximum separation, keeping only the first ocurrence (thus the importance of the sorting procedure above).
 
@@ -157,7 +165,9 @@ java -jar stilts.jar tmatch1 matcher=sky+1d values='RA DEC z' params='2 0.002' a
 
 ## Known issues
 
-Some redshifts are duplicated even after the previous duplicate removal procedure. This is more common for extended objects (such as big galaxies in nearby clusters). This happens because, although the measurements lie inside a 2 arcsecond radius, they differ by more than 0.002 in z, thus they are not detected as duplicated and are not removed.
+Some redshifts are duplicated even after the previous duplicate removal procedure. This is more common for extended objects (such as big galaxies in nearby clusters). This occurs because some measurements for the same object are taken with more than 1 arcsecond of separation.
+
+<!-- This happens because, although the measurements lie inside a 2 arcsecond radius, they differ by more than 0.002 in z, thus they are not detected as duplicated and are not removed. -->
 
 The HEASARC table descriptions are incomplete. There seems to be a limit to how many characters are returned, so the text is cut.
 
